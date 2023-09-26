@@ -1,0 +1,17 @@
+{
+    "name": "orangensaft-studios/webt-oop-php-vc",
+    "description": "WEBT | CORE | Object Oriented PHP with Version Control",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "OrangensaftStudios\\WebtOopPhpVc\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Severin Rosner",
+            "email": "einsevspielt@gmail.com"
+        }
+    ],
+    "require": {}
+}
