@@ -13,6 +13,7 @@ $vimeovid1 = new VimeoVideo('The Vegan Muffin', '109105753');
 
 
 $site = <<< SITE
+<link rel="stylesheet" href="/assets/style.css">
 <div>
     <div>
         <h3>{$ytvid1->getCode()}</h3>
