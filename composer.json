@@ -11,6 +11,10 @@
         {
             "name": "Severin Rosner",
             "email": "einsevspielt@gmail.com"
+        },
+        {
+            "name": "Roman Krebs",
+            "email": "roman.krebs@gmx.at"
         }
     ],
     "require": {}
