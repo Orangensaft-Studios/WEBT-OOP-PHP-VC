@@ -39,8 +39,7 @@ class YouTubeVideo extends Video
     {
         return <<<VIDEO
             <p>"{$this->getName()}" <span>via {$this->getSource()}</span></p> 
-            <iframe width="560" height="315"
-                src="https://www.youtube.com/embed/{$this->getYoutubeID()}" allowfullscreen></iframe> 
+            <iframe loading="lazy" src="https://www.youtube.com/embed/{$this->getYoutubeID()}" allowfullscreen></iframe> 
             
         VIDEO;
     }

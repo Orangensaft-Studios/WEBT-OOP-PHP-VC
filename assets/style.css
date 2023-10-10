@@ -1,8 +1,10 @@
 h1 {
     color: whitesmoke;
-    padding-left: 47.5%;
+    padding-left: 43vw;
+    font-size: 3vw;
     font-family: Arial, cursive;
 }
+
 * {
     color: whitesmoke;
     font-family: Arial, serif;
@@ -13,10 +15,14 @@ body{
 }
 
 .video {
-    margin: auto;
+    margin: 2vw;
+    padding-bottom: 10vh;
     align-self: center;
     padding-left: 10%;
-
+    overflow-wrap: break-word;
+    word-break: break-word;
+    width: 30vw;
+    height: calc((30vw/16) * 9);
 }
 
 .container {
@@ -27,8 +33,40 @@ body{
 }
 
 iframe {
-    width: auto;
-    height: auto;
+    width: 30vw;
+    height: calc((30vw/16) * 9);
     box-shadow: 0 10px 40px rgba(255,255,255,.25);
     border-radius: 3%;
+}
+
+p{
+    font-size: 1vw;
+}
+
+@media screen and (max-width: 800px) {
+    iframe {
+        width: 50vw;
+        height: calc((50vw/16) * 9);
+        box-shadow: 0 10px 40px rgba(255,255,255,.25);
+        border-radius: 3%;
+    }
+
+    p{
+        font-size: 2vw;
+    }
+
+    h1 {
+        padding-left: 30vw;
+        font-size: 4vw;
+    }
+
+    .video {
+        margin: 5vw;
+        align-self: center;
+        padding-left: 10%;
+        overflow-wrap: break-word;
+        word-break: break-word;
+        width: 50vw;
+        height: calc((50vw/16) * 9);
+    }
 }

@@ -40,7 +40,7 @@ class VimeoVideo extends Video
     {
         return <<<VIMEO
             <p>"{$this->getName()}" <span>via {$this->getSource()}</span></p> 
-            <iframe loading="lazy" src="https://player.vimeo.com/video/{$this->getVimeoID()}" allow="autoplay; fullscreen; picture-in-picture" data-ratio="0.562" data-width="500" data-height="281" style="display: block; margin: 0px; width: 500px; height: 281px;"></iframe>
+            <iframe loading="lazy" src="https://player.vimeo.com/video/{$this->getVimeoID()}" allowfullscreen></iframe>
         VIMEO;
 
     }
