@@ -2,45 +2,38 @@
 
 namespace OrangensaftStudios\WebtOopPhpVc\Classes;
 
-use OrangensaftStudios\WebtOopPhpVc\Classes\Video;
-
 class VimeoVideo extends Video
 {
     private $source;
 
-    private $vimeoID;
+    private $origin;
 
     /**
      * @param $name
-     * @param $vimeoID
+     * @param $source
      */
-    public function __construct($name, $vimeoID)
+    public function __construct($name, $source)
     {
         parent::__construct($name);
-        $this->source = $this->getSource();
-        $this->vimeoID = $vimeoID;
+        $this->source = $source;
+        $this->origin = 'Vimeo';
     }
 
     public function getSource(): string
     {
-        return 'Vimeo';
+        return $this->source;
     }
 
-    /**
-     * @return mixed
-     */
-    public function getVimeoID()
+    public function getOrigin() : string
     {
-        return $this->vimeoID;
+        return $this->origin;
     }
-
-
 
     function getCode(): string
     {
         return <<<VIMEO
-            <p>"{$this->getName()}" <span>via {$this->getSource()}</span></p> 
-            <iframe loading="lazy" src="https://player.vimeo.com/video/{$this->getVimeoID()}" allowfullscreen></iframe>
+            <p>"{$this->getName()}" <span>via {$this->getOrigin()}</span></p> 
+            <iframe loading="lazy" src="{$this->getSource()}" allowfullscreen></iframe>
         VIMEO;
 
     }

@@ -6,17 +6,17 @@ class YouTubeVideo extends Video
 {
 
     private string $source;
-    private string $youtubeID;
+    private string $origin;
 
     /**
      * @param string $name
-     * @param string $youtubeID
+     * @param string $source
      */
-    public function __construct(string $name, string $youtubeID)
+    public function __construct(string $name, string $source)
     {
         parent::__construct($name);
-        $this->source = $this->getSource();
-        $this->youtubeID = $youtubeID;
+        $this->source = $source;
+        $this->origin = 'YouTube';
     }
 
     /**
@@ -24,12 +24,12 @@ class YouTubeVideo extends Video
      */
     public function getSource(): string
     {
-        return 'YouTube';
+        return $this->source;
     }
 
-    public function getYoutubeID(): string
+    public function getOrigin(): string
     {
-        return $this->youtubeID;
+        return $this->origin;
     }
 
     /**
@@ -38,8 +38,8 @@ class YouTubeVideo extends Video
     public function getCode(): string
     {
         return <<<VIDEO
-            <p>"{$this->getName()}" <span>via {$this->getSource()}</span></p> 
-            <iframe loading="lazy" src="https://www.youtube.com/embed/{$this->getYoutubeID()}" allowfullscreen></iframe> 
+            <p>"{$this->getName()}" <span>via {$this->getOrigin()}</span></p> 
+            <iframe loading="lazy" src="{$this->getSource()}" allowfullscreen></iframe> 
             
         VIDEO;
     }
