@@ -7,6 +7,8 @@ use OrangensaftStudios\WebtOopPhpVc\Interfaces\VideoInterface;
 abstract class Video implements VideoInterface
 {
     private string $name;
+    protected string $origin;
+    protected string $source;
 
     /**
      * @param string $name

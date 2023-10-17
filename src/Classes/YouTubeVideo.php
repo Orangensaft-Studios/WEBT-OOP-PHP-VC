@@ -4,10 +4,6 @@ namespace OrangensaftStudios\WebtOopPhpVc\Classes;
 
 class YouTubeVideo extends Video
 {
-
-    private string $source;
-    private string $origin;
-
     /**
      * @param string $name
      * @param string $source

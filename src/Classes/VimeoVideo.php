@@ -4,10 +4,6 @@ namespace OrangensaftStudios\WebtOopPhpVc\Classes;
 
 class VimeoVideo extends Video
 {
-    private $source;
-
-    private $origin;
-
     /**
      * @param $name
      * @param $source
